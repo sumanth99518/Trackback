@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "TrackBack - Offline Path Tracking & Return Navigation",
+  "short_name": "TrackBack",
+  "description": "Offline-first GPS path tracking, route recording, and reverse-route return navigation without cell service.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0b132b",
+  "background_color": "#0b132b",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

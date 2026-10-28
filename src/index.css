@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sat: env(safe-area-inset-top, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+  }
+
+  body {
+    background-color: #0b132b;
+    color: #f1f5f9;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Leaflet Dark Map & Customization */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #060b18 !important;
+  font-family: inherit;
+  outline: none;
+}
+
+/* Custom dark tile filter for OpenStreetMap tiles so it matches dark outdoors aesthetic cleanly */
+.dark-map-tiles .leaflet-tile {
+  filter: brightness(0.7) invert(1) contrast(3.2) hue-rotate(200deg) saturate(0.28) brightness(0.75);
+}
+
+/* Offline topo grid pattern when tiles are unavailable */
+.offline-grid-canvas {
+  background-color: #080e1e;
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+/* Clean up Leaflet default controls for touch devices */
+.leaflet-bar {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.leaflet-bar a {
+  background-color: rgba(15, 23, 42, 0.92) !important;
+  color: #f8fafc !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  width: 38px !important;
+  height: 38px !important;
+  line-height: 38px !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(11, 19, 43, 0.8) !important;
+  color: #64748b !important;
+  font-size: 10px !important;
+  padding: 2px 6px !important;
+  border-radius: 6px !important;
+}
+
+.leaflet-control-attribution a {
+  color: #94a3b8 !important;
+}
+
+/* Pulse animation for current location dot */
+@keyframes ringPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.gps-radar-ring {
+  animation: ringPulse 2s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+}
+

@@ -1,0 +1,10 @@
+{
+  "name": "TrackBack - Offline Path Tracking & Return Navigation",
+  "description": "An offline-first GPS path tracking and reverse-route return navigation application.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

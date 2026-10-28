@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="pathGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#1e293b" stroke-width="4" stroke-dasharray="8 8" />
+  <!-- Retrace Arrow Path -->
+  <path d="M 140 370 C 140 280, 220 280, 220 210 C 220 150, 360 150, 360 270 C 360 340, 290 350, 290 310" 
+        fill="none" stroke="url(#pathGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Start Point (Green) -->
+  <circle cx="140" cy="370" r="24" fill="#10b981" stroke="#ffffff" stroke-width="6" />
+  <!-- Turn Checkpoints -->
+  <circle cx="220" cy="210" r="10" fill="#38bdf8" />
+  <circle cx="360" cy="270" r="10" fill="#38bdf8" />
+  <!-- Return Navigation Arrow at end -->
+  <polygon points="290,285 272,325 308,325" fill="#f59e0b" stroke="#ffffff" stroke-width="4" transform="rotate(-40 290 310)" />
+  <!-- Compass Cardinal Marks -->
+  <text x="256" y="80" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#38bdf8" text-anchor="middle">N</text>
+  <text x="440" y="264" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="22" fill="#64748b" text-anchor="middle">E</text>
+  <text x="256" y="450" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="22" fill="#64748b" text-anchor="middle">S</text>
+  <text x="75" y="264" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="22" fill="#64748b" text-anchor="middle">W</text>
+</svg>
